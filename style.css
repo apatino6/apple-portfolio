@@ -1,0 +1,62 @@
+/* 
+  Color Palette - Apple Notes Inspired (Dark Mode)
+  -------------------------------------------------
+  Background (dark): #1C1C1E
+  Text (light): #F2F2F7
+  Secondary gray: #8E8E93
+  Yellow/orange (accent): #FF9F0A
+*/
+
+body {
+    background-color: #1C1C1E;
+    color: #F2F2F7;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    max-width: 800px;
+    padding:  40px;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #F2F2F7;
+}
+
+nav {
+    background-color: #FF9F0A;
+    padding: 5px;
+}
+
+header {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: "Georgia", serif;
+}
+
+h1 {
+    color: #F2F2F7;
+    font-size: 36px;
+}
+
+h2 {
+    color: #F2F2F7;
+    font-size: 24px;
+    border-bottom: 2px solid #FF9F0A;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #F2F2F7;
+    font-size: 18px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+}
