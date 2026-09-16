@@ -6,11 +6,20 @@
   Secondary gray: #8E8E93
   Yellow/orange (accent): #FF9F0A
 */
+:root {
+    --bg-color: #1c1c1e;
+    --text-color: #f2f2f7;
+    --secondary-gray: #8e8e93;
+    --accent-orange: #ff9f0a;
+    --card-bg: #2c2c2e;
+    --card-border: #3a3a3c;
+}
+/*  --------------------------------------------------- */
 
 body {
-    background-color: #1C1C1E;
-    color: #F2F2F7;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     margin: 0 auto;
     max-width: 800px;
     padding:  40px;
@@ -19,12 +28,23 @@ body {
 nav a {
     margin-right: 10px;
     text-decoration: none;
-    color: #F2F2F7;
+    color: var(--text-color);
 }
 
 nav {
-    background-color: #FF9F0A;
+    background-color: var(--accent-orange);
     padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+section {
+    background-color: var(--bg-color);
+    border: 1px solid var(--secondary-gray);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 header {
@@ -36,19 +56,20 @@ h1, h2, h3 {
 }
 
 h1 {
-    color: #F2F2F7;
+    color: var(--text-color);
     font-size: 36px;
 }
 
 h2 {
-    color: #F2F2F7;
+    color: var(--text-color);
     font-size: 24px;
-    border-bottom: 2px solid #FF9F0A;
+    border-bottom: 4px solid var(--accent-orange);
     padding-bottom: 5px;
+    /* border-radius: 1px; */
 }
 
 h3 {
-    color: #F2F2F7;
+    color: var(--text-color);
     font-size: 18px;
 }
 
@@ -59,4 +80,55 @@ img {
 
 footer {
     text-align: center;
+}
+
+/* about page layout, only used here so the other pages don't change */
+
+.page-layout {
+    display: grid;                      /* grid splits the page into 2 columns */
+    grid-template-columns: 200px 1fr;   /* nav column, then content column */
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.site-nav {
+    display: flex;                /* flexbox stacks the nav links up and down */
+    flex-direction: column;
+    gap: 8px;
+    background-color: var(--accent-orange);
+    border-radius: 12px;
+    padding: 16px 10px;
+    height: fit-content;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.site-nav a {
+    margin-right: 0;      /* don't need side margin since links are stacked now */
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.site-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.15);   /* darkens link on hover */
+}
+
+.site-content {
+    min-width: 0;   /* stops content from overflowing the grid column */
+}
+
+.site-content footer {
+    margin-top: 20px;
+}
+
+/* shrinks nav back to a row on small screens */
+@media (max-width: 600px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .site-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }

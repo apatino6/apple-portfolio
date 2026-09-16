@@ -1,55 +1,58 @@
-<!doctype html>
-
-
-<html lang="en">
-<head>
+<!doctype html>                     <!-- start the html doc -->
+<html lang="en">                    <!-- set the page language -->
+<head>                              <!-- start the head -->
     <meta charset="UTF-8">
-    <title>
+    <title>                         <!-- tab title -->
         Portfolio Angel About
     </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">   <!-- link the css file -->
 </head> 
 
-<body>
-    <nav>
-        <a href="index.html">Home Page</a>
-        <a href="second_page.html">Page 2</a>
-        <a href="third_page.html">Page 3</a>
-        <a href="about.html">About Page</a>
+<body>                              <!-- start the body -->
 
-    </nav>
+    <div class="page-layout">      <!-- wrapper that makes the grid layout -->
 
-    <h1>
-        About This Site
-    </h1>
-    <p>
-        This site began as just an assignment for my Web Programming class. 
-        I thought about something I loved and I made it about my 3 huskies. 
-        But then I wanted some inspiration and decided to check out GitHub 
-        for website portfolios. I found a really cool project that resembled 
-        Apple's Notes app.
-    </p>
+        <nav class="site-nav">     <!-- sidebar nav, flexbox stacks the links -->
+            <a href="index.html">Home Page</a>
+            <a href="second_page.html">Page 2</a>
+            <a href="third_page.html">Page 3</a>
+            <a href="about.html">About Page</a>
+        </nav>
 
-    <p>
-        This project really hit home. I am a Computer Science student and I work
-        at Apple Lenox Square. I want a cooler way to show my resume. Something that really
-        captures who I am and what I like.
-    </p>
+        <main class="site-content">    <!-- main content, sits next to the nav -->
+            <h1>
+                About This Site
+            </h1>
+            <p>
+                This site began as just an assignment for my Web Programming class. 
+                I thought about something I loved and I made it about my 3 huskies. 
+                But then I wanted some inspiration and decided to check out GitHub 
+                for website portfolios. I found a really cool project that resembled 
+                Apple's Notes app.
+            </p>
 
-    <p>
-        My goal is to rebuild it by hand, not just copy it. In doing this I hope to 
-        customize it to represent me more and learn more about web/app creations!
-    </p>
+            <p>
+                This project really hit home. I am a Computer Science student and I work
+                at Apple Lenox Square. I want a cooler way to show my resume. Something that really
+                captures who I am and what I like.
+            </p>
 
-    <footer>
-        <a href="http://www.linkedin.com/in/angel-patino-5398033b2">LinkedIn</a>
-        <a href="https://github.com/apatino6">GitHub</a>
-    </footer>
+            <p>
+                My goal is to rebuild it by hand, not just copy it. In doing this I hope to 
+                customize it to represent me more and learn more about web/app creations!
+            </p>
 
-    <p>
-        <img src="images/memoji111.png" alt="angel patino" width = "300">
-    </p>
-    </body>
+            <p>
+                <img src="images/memoji111.png" alt="angel patino" width="300">   <!-- profile pic -->
+            </p>
 
+            <footer>                <!-- links to my socials at the bottom -->
+                <a href="http://www.linkedin.com/in/angel-patino-5398033b2">LinkedIn</a>
+                <a href="https://github.com/apatino6">GitHub</a>
+            </footer>
+        </main>
+
+    </div>
+
+</body>
 </html>
-
